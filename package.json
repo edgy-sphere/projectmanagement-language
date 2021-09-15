@@ -1,0 +1,54 @@
+{
+    "name": "projectmanagement-language",
+    "displayName": "ProjectManagement Language",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "projectmanagement",
+            "aliases": ["ProjectManagement", "projectmanagement"],
+            "extensions": [".pm"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "projectmanagement",
+            "scopeName": "source.projectmanagement",
+            "path": "./syntaxes/projectmanagement.tmLanguage.json"
+        }],
+        "colors": [
+            {
+                "id": "fire.truck",
+                "defaults": {
+                    "light": "#ff0000",
+                    "dark": "#ff0000",
+                    "highContrast": "#ff0000"
+                },
+                "description": "DDD"
+            }
+        ],
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "projectmanagement",
+                    "icon": "$(checklist)",
+                    "title": "ProjectManagement"
+                }
+            ]
+        },
+        "views": {
+            "projectmanagement": [
+                {
+                    "id": "projectmanagement.bugs",
+                    "name": "Bugs",
+                    "visibility": "collapsed"
+                }
+            ]
+        }
+    }
+}

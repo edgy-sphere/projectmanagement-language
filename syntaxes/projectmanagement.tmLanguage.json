@@ -1,0 +1,60 @@
+{
+	"name": "ProjectManagement",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#linemarkers"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+                {
+                    "name": "keyword.bugs",
+                    "match": "BUGS:"
+                },
+                {
+                    "name": "keyword.todo",
+                    "match": "TODO:"
+                },
+                {
+                    "name": "keyword.issueid",
+                    "match": "#[\\d\\w]{6}\\s+"
+                }
+            ]
+		},
+        "linemarkers": {
+            "patterns": [
+                {
+                    "name": "comment.line.done",
+                    "match": "\\s*-.*"
+                },
+                {
+                    "name": "comment.line.important",
+                    "match": "\\s*\\!.*"
+                },
+                {
+                    "name": "comment.line.uncertain",
+                    "match": "\\s*\\?.*"
+                }
+            ]
+        },
+        "blocks": {
+            "name": "block.projectmanagement",
+            "begin": ":",
+            "end": "\\^[^\\s].*$",
+            "beginCaptures": {
+                "0": { "name": "block.begin.projectmanagement" }
+            },
+            "endCaptures": {
+                "0": { "name": "block.end.projectmanagement" }
+            },
+            "patterns": [
+                { "include": "#keywords" }
+            ]
+        }
+	},
+	"scopeName": "source.projectmanagement"
+}
