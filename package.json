@@ -2,6 +2,11 @@
     "name": "projectmanagement-language",
     "displayName": "ProjectManagement Language",
     "description": "",
+    "publisher": "Simon",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/edgy-sphere/projectmanagement-language"
+    },
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.60.0"
