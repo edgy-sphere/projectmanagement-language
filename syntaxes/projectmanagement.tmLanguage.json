@@ -5,39 +5,47 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#linemarkers"
+			"include": "#expressions"
 		}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [
                 {
-                    "name": "keyword.bugs",
+                    "name": "projectmanagement.keyword.bugs",
                     "match": "BUGS:"
                 },
                 {
-                    "name": "keyword.todo",
+                    "name": "projectmanagement.keyword.todo",
                     "match": "TODO:"
                 },
                 {
-                    "name": "keyword.issueid",
+                    "name": "projectmanagement.keyword.githubid",
                     "match": "#[\\d\\w]{6}\\s+"
                 }
             ]
 		},
-        "linemarkers": {
+        "expressions": {
             "patterns": [
                 {
-                    "name": "comment.line.done",
-                    "match": "\\s*-.*"
+                    "name": "projectmanagement.expression.done",
+                    "match": "^\\s*/.*$"
                 },
                 {
-                    "name": "comment.line.important",
-                    "match": "\\s*\\!.*"
+                    "name": "projectmanagement.expression.important",
+                    "match": "\\s(?![^\\!]*(\\?+|>>|e\\.g\\.))[^\\!]+\\!+"
                 },
                 {
-                    "name": "comment.line.uncertain",
-                    "match": "\\s*\\?.*"
+                    "name": "projectmanagement.expression.uncertain",
+                    "match": "\\s(?![^\\?]*(\\!+|>>|e\\.g\\.))[^\\?]+\\?+"
+                },
+                {
+                    "name": "projectmanagement.expression.example",
+                    "match": "e\\.g\\.[^\\!\\?]+[\\!\\?]*"
+                },
+                {
+                    "name": "projectmanagement.expression.inference",
+                    "match": ">>[^\\!\\?]+[\\!\\?]*"
                 }
             ]
         },

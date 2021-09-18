@@ -15,7 +15,7 @@
         ["(", ")"]
     ],
     "indentationRules": {
-        "increaseIndentPattern": ":",
-        "decreaseIndentPattern": "::"
+        "increaseIndentPattern": ":\\s*$",
+        "decreaseIndentPattern": "BUGS:|TODO:"
     }
 }
